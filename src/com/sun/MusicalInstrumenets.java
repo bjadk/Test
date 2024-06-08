@@ -15,7 +15,7 @@ public abstract class MusicalInstrumenets {
 	 System.out.println("Name: "+name);
  }
  public void setSound( String sound) {
-	 this.sound =sound;// mmm
+	 this.sound =sound;
  }
 	
 	}
