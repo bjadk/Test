@@ -8,6 +8,9 @@ package com.sun;
 public abstract class MusicalInstrumenets {
  String name;
  String sound;
+ public void play() {
+	 
+ }
  public void setName( String name) {
 	 this.name= name;
  }
