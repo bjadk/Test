@@ -69,4 +69,14 @@ public class BankAccount {
 		}
 
 	}
+
+	public static void displayAccountDetails(BankAccounts account1) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public static void displayAccountDetails(BankAccount account1) {
+		// TODO Auto-generated method stub
+		
+	}
 }

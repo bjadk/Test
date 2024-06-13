@@ -10,42 +10,34 @@ package com.sun;
 public class Product {
 	String name;
 	int price;
-	String manufacturer;
 
-	public void showName() {
-		System.out.println("name: " + name);
+	void display() {
+		System.out.print("name: " + name + ", price: " + price);
+
 	}
 
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public void showPrice() {
-		System.out.println("price: " + price);
-	}
-
-	public void setPrice(int price) {
-		this.price = price;
-	}
 }
 
 class Food extends Product {
 	String expiryDate;
 
-	public void setExpiryDate(String expiryDate) {
-		this.expiryDate = expiryDate;
-	}
-
-	public void showExpriryDate() {
-
-		System.out.println("赏味期限：" + expiryDate);
-	}
-
+	@Override
 	void display() {
-		System.out.println("赏味期限：" + expiryDate);
+		super.display();
+		System.out.print(" ,expiryDate:" + expiryDate);
+
 	}
 }
 
+class Electronics extends Product {
+	String manufacturer;
+
+	@Override
+	void display() {
+		super.display();
+		System.out.print("manufacturer: " + manufacturer);
+	}
+}
 //
 //	public void display() {
 //		System.out.println("显示产品详情。");
