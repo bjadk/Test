@@ -13,17 +13,17 @@ public class Java34 {
 		int a = 31;
 		boolean falg = true;
 		isPrime(a);
-
+		return a;
+		
 	}
-
 	public static boolean isPrime(int a) {
-		for (int i = 2; i <= Math.sqrt(a); i++) {
-			if (a % i == 0) {
-				return false;
-			}
-
+		for ( int i =2;i <=Math.sqrt(a);i++) {
+		if( a%i ==0) {
+			return false;
 		}
-		return true;
-
+			
+		}
+return true;
+	
 	}
 }

@@ -13,14 +13,7 @@ public class Java32 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		String[]array = {"flower", "flow", "flight"};
-		for( int i = 0; i< array.length;i++) {
-		String word = array[i];
-		if(word) {
-			
-		}
 		
+	}	
 
 	}
-
-}

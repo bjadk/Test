@@ -15,13 +15,17 @@ package com.sun;
  * 
  */
 public class BankAccount {
-	private long accountNumber;
+	private String accountNumber;
 	private String accountHolder;
 	private int balance;
-	private int deposit;
-	private int withdraw;
 
-	public long getAccountNumber() {
+	public BankAccount(String accountNumber, String accountHolder, int balance) {
+		this.accountNumber = accountNumber;
+		this.accountHolder = accountHolder;
+		this.balance = balance;
+	}
+
+	public String getAccountNumber() {
 		return accountNumber;
 	}
 
@@ -32,23 +36,9 @@ public class BankAccount {
 	public int getBalance() {
 		return balance;
 
-	} 
-
-	public int getDeposit() {
-		return deposit;
 	}
 
-	public int getWithdraw() {
-		return withdraw;
-	}
-	public void setDeposit( int deposit) {
-		this.deposit = deposit;
-	}
-	public int setWithDraw(int withdraw ) {
-		return this.withdraw = withdraw;
-	}
-
-	public void setAccountNumber(long accountNumber) {
+	public void setAccountNumber(String accountNumber) {
 		this.accountNumber = accountNumber;
 	}
 
@@ -60,10 +50,16 @@ public class BankAccount {
 		this.balance = balance;
 	}
 
-	public void setWithdraw(int amount) {
+	public void deposit(int amount) {
+		if (amount > 0) {
+			balance += amount;
+		}
+	}
 
-		if (amount >= balance && amount > 0) {
-			balance -= withdraw;
+	public void Withdraw(int amount) {
+
+		if (amount <= balance && amount > 0) {
+			balance -= amount;
 		} else {
 			System.out.println(" お金足りない");
 		}
@@ -72,11 +68,11 @@ public class BankAccount {
 
 	public static void displayAccountDetails(BankAccounts account1) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	public static void displayAccountDetails(BankAccount account1) {
 		// TODO Auto-generated method stub
-		
+
 	}
 }
